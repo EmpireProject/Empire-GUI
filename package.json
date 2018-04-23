@@ -1,0 +1,55 @@
+{
+  "name": "empire-framework-gui",
+  "productName": "Empire Framework GUI",
+  "description": "A front end GUI for multiuser accessibility to the Empire Framework",
+  "version": "0.0.0",
+  "private": true,
+  "author": "@disk0nn3ct <danny.chrastil@gmail.com>, @xorrior",
+  "copyright": "",
+  "homepage": "https://github.com/dchrastil",
+  "main": "app/background.js",
+  "build": {
+    "appId": "com.empire.fronted-gui",
+    "files": [
+      "app/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "buildResources": "resources"
+    },
+    "publish": null
+  },
+  "scripts": {
+    "postinstall": "electron-builder install-app-deps",
+    "preunit": "webpack --config=build/webpack.unit.config.js --env=test --display=none",
+    "unit": "electron-mocha temp/specs.js --renderer --require source-map-support/register",
+    "pree2e": "webpack --config=build/webpack.app.config.js --env=test --display=none && webpack --config=build/webpack.e2e.config.js --env=test --display=none",
+    "e2e": "mocha temp/e2e.js --require source-map-support/register",
+    "test": "npm run unit && npm run e2e",
+    "start": "node build/start.js",
+    "release": "npm test && webpack --config=build/webpack.app.config.js --env=production && electron-builder"
+  },
+  "dependencies": {
+    "fs-jetpack": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.5",
+    "@babel/preset-env": "^7.0.0-beta.5",
+    "babel-loader": "^8.0.0-beta.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "chai": "^4.1.0",
+    "css-loader": "^0.28.7",
+    "electron": "^1.7.9",
+    "electron-builder": "^19.43.3",
+    "electron-mocha": "^4.0.0",
+    "friendly-errors-webpack-plugin": "^1.6.1",
+    "mocha": "^4.0.1",
+    "source-map-support": "^0.5.0",
+    "spectron": "^3.7.2",
+    "style-loader": "^0.19.0",
+    "webpack": "^3.8.1",
+    "webpack-merge": "^4.1.0",
+    "webpack-node-externals": "^1.6.0"
+  }
+}

@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Empire Framework</title>
+  <link rel="stylesheet" href="jquery-ui.css">
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="stars.css">
+  <link href="fonts.css" rel="stylesheet">
+</head>
+
+
+<body>
+    <div id="main-login">
+        <div id='stars'></div>
+        <div id='stars2'></div>
+        <div id='stars3'></div>
+        <div id="login-main">
+        <pre style="float:left;">
+                                      `````````
+                                 ``````.--::///+
+                             ````-+sydmmmNNNNNNN
+                           ``./ymmNNNNNNNNNNNNNN
+                         ``-ymmNNNNNNNNNNNNNNNNN
+                       ```ommmmNNNNNNNNNNNNNNNNN
+                      ``.ydmNNNNNNNNNNNNNNNNNNNN
+                     ```odmmNNNNNNNNNNNNNNNNNNNN
+                    ```/hmmmNNNNNNNNNNNNNNNNMNNN
+                   ````+hmmmNNNNNNNNNNNNNNNNNMMN
+                  ````..ymmmNNNNNNNNNNNNNNNNNNNN
+                  ````:.+so+//:---.......----::-
+                 `````.`````````....----:///++++
+                ``````.-/osy+////:::---...-dNNNN
+                ````:sdyyydy`         ```:mNNNNM
+               ````-hmmdhdmm:`      ``.+hNNNNNNM
+               ```.odNNmdmmNNo````.:+yNNNNNNNNNN
+               ```-sNNNmdh/dNNhhdNNNNNNNNNNNNNNN
+               ```-hNNNmNo::mNNNNNNNNNNNNNNNNNNN
+               ```-hNNmdNo--/dNNNNNNNNNNNNNNNNNN
+              ````:dNmmdmd-:+NNNNNNNNNNNNNNNNNNm
+              ```/hNNmmddmd+mNNNNNNNNNNNNNNds++o
+             ``/dNNNNNmmmmmmmNNNNNNNNNNNmdoosydd
+             `sNNNNdyydNNNNmmmmmmNNNNNmyoymNNNNN
+             :NNmmmdso++dNNNNmmNNNNNdhymNNNNNNNN
+             -NmdmmNNdsyohNNNNmmNNNNNNNNNNNNNNNN
+             `sdhmmNNNNdyhdNNNNNNNNNNNNNNNNNNNNN
+               /yhmNNmmNNNNNNNNNNNNNNNNNNNNNNmhh
+                `+yhmmNNNNNNNNNNNNNNNNNNNNNNmh+:
+                  `./dmmmmNNNNNNNNNNNNNNNNmmd.
+                    `ommmmmNNNNNNNmNmNNNNmmd:
+                     :dmmmmNNNNNmh../oyhhhy:
+                     `sdmmmmNNNmmh/++-.+oh.
+                      `/dmmmmmmmmdo-:/ossd:
+                        `/ohhdmmmmmmdddddmh/
+                           `-/osyhdddddhyo:
+                                ``.----.`
+          </pre> 
+          <div id="login">
+            <h2>LOGIN TO THE EMPIRE</h2>
+            <form name="login">
+                <input type="text" id="server-ip" placeholder="0.0.0.0"><br/>
+                <input type="text" id="server-port" placeholder="1337"><br/>
+                <input type="text" id="alias" placeholder="user alias"><br/>
+                <input type="password" id="password" placeholder="password"><br/>
+                <button type="submit" class="ui-button ui-widget ui-corner-all" id="login-button" value="LOGIN">LOGIN</button>
+            </form>
+          </div>
+      </div>
+    </div>
+
+    <div id="message-box" title="Empire">Test</div>
+
+    <div id="top-nav">
+        <img src="images/empire-logo.jpg" width=150>
+    </div>
+
+      <div id="side-nav-content-agents" class="side-nav-content">
+          <div class="menu-header">AGENTS</div>
+          <div id="side-nav-content-agentlist">-- no agents --</div>
+      </div>
+      <div id="side-nav-content-listeners" class="side-nav-content">
+          <div class="menu-header">LISTENERS</div>
+          <div id="side-nav-content-listenerlist">-- no listeners --</div>
+          <!--
+          <div id="side-nav-content-listenerbuttons">
+              <select id="listener-type">
+                  <option name="dbx">dbx</option>
+                  <option name="http">http</option>
+                  <option name="http_com">http_com</option>
+                  <option name="http_foreign">http_foreign</option>
+                  <option name="http_hop">http_hop</option>
+                  <option name="http_mapi">http_mapi</option>
+                  <option name="meterpreter">meterpreter</option>
+              </select>
+              <button id="listener-create" class="sidenav-button ui-button ui-widget ui-corner-all" value="create">Create</button>
+          </div>
+          -->
+      </div>
+      
+      <!--<div id="side-nav-content-modules" class="side-nav-content">
+          <div class="menu-header">MODULES</div>
+          <div id="side-nav-content-modulelist">-- no modules --</div>
+      </div>
+      -->
+      <!--<div id="side-nav-content-stagers" class="side-nav-content">
+          <div class="menu-header">STAGERS</div>
+          <div id="side-nav-content-stagerlist">-- no stagers --</div>
+      </div>-->
+      <div id="side-nav-content-users" class="side-nav-content">
+          <div class="menu-header">USERS</div>
+          <div id="side-nav-content-userlist">-- no users --</div>
+      </div>
+
+      <div id="main">
+        <div id="side-nav">
+          <a href="#" id="navbuttonclose" onclick="closeNav()"><img src="images/bRewMuZ.png" alt="close" border="0"></a>
+          <a href="#" class="navbutton" onclick="openNav('agents')"><img src="images/1cSv4N8.png" alt="agents" border="0"></a>
+          <a href="#" class="navbutton" onclick="openNav('listeners')"><img src="images/aGsnDfj.png" alt="listeners" border="0"></a>
+          <a href="#" class="navbutton" onclick="openNav('modules')"><img src="images/A1s6kk1.png" alt="modules" border="0"></a>
+          <!--<a href="#" class="navbutton" onclick="openNav('stagers')"><img src="images/SHvngwJ.png" alt="stagers" border="0"></a>-->
+          <a href="#" class="navbutton" onclick="openNav('users')"><img src="images/PlGzR3K.png" alt="users" border="0"></a>
+        </div>
+
+        <div id="content">
+        </div>
+
+        <div id="terminals">
+          <ul id="termtabs">
+            <li><a href="#term-empire">Empire</a></li>
+          </ul>
+          <div id="term-empire" class="console1"><div class="jquery-console-prompt-box jquery-console-inner" id="console-log"></div>
+        </div>
+      </div>
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+    <script type="text/javascript" src="prefixfree.min.js"></script>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery-ui.js"></script>
+    <script type="text/javascript" src="socket.io.min.js"></script>
+    <script type="text/javascript" src="jquery.console.js"></script>
+    <script type="text/javascript" src="extra.js"></script>
+    <script type="text/javascript" src="socketio.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script>if (window.module) module = window.module;</script>
+    <script>
+        $(function() {
+          $("#terminals").tabs();
+          $("#listener-type").selectmenu();
+        });
+    </script>
+</body>
+
+</html>
