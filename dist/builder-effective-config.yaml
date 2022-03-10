@@ -1,0 +1,11 @@
+directories:
+  output: dist
+  buildResources: resources
+appId: com.empire.fronted-gui
+files:
+  - filter:
+      - app/**/*
+      - node_modules/**/*
+      - package.json
+publish: null
+electronVersion: 17.1.1
