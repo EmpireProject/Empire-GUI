@@ -1,10 +1,11 @@
 const path = require("path");
-const merge = require("webpack-merge");
+const { merge } = require('webpack-merge')
 const base = require("./webpack.base.config");
 
 module.exports = env => {
   return merge(base(env), {
-    entry: {
+	mode: 'production',
+	  entry: {
       background: "./src/background.js",
       app: "./src/app.js"
     },
