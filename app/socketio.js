@@ -86,7 +86,7 @@ function loginConnect(server,port,alias,password) {
     // connect to server
     aliasname = alias;
     console.log('> Attempting to connect to Empire ('+server+':'+port+')')
-    var socket = io.connect('https://'+server+':'+port, verify=false, {rejectUnauthorized: false}); 
+    var socket = io.connect('https://'+server+':'+port, {rejectUnauthorized: true}); 
 
     // attempt to login
     var data = {username : alias, password: password}
